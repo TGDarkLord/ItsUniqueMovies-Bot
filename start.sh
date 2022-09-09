@@ -1,5 +1,5 @@
 echo "Cloning Repo, Please Wait..."
-git clone -b master https://github.com/TGDarkLord/MovieClub-Robot.git /MovieClub-Robot
+git clone -b main https://github.com/TGDarkLord/MovieClub-Robot.git /MovieClub-Robot
 cd /MovieClub-Robot
 echo "Installing Requirements..."
 pip3 install -U -r requirements.txt
