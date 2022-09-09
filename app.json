@@ -1,6 +1,6 @@
 {
-    "name": "IMDb-Movie-Bot",
-    "description": "When you going to send file on telegram channel this bot will save that in database, So you can search that easily in inline mode",
+    "name": "MovieClub-Robot",
+    "description": "This is my private project",
     "stack": "container",
     "keywords": [
       "telegram",
@@ -15,8 +15,8 @@
       "index",
       "inline"
     ],
-    "website": "https://github.com/JOSProjects/IMDb-Movie-Bot",
-    "repository": "https://github.com/JOSProjects/IMDb-Movie-Bot",
+    "website": "https://github.com/TGDarkLord/MovieClub-Robot",
+    "repository": "https://github.com/TGDarkLord/MovieClub-Robot",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
