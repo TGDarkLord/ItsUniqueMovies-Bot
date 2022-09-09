@@ -1,4 +1,4 @@
-# Kanged From @hellodragan 
+# Kanged From @hellodarklord
 import pytz
 import datetime
 from pyrogram import Client, filters
@@ -32,13 +32,13 @@ logger.setLevel(logging.ERROR)
 BUTTONS = {}
 SPELL_CHECK = {}
 
-@Client.on_edited_message(filters.command("alive"))
+@Client.on_message(filters.command("alive"))
 async def alive(client, message):
     await message.reply_text("I'm Not Dead...")
 
-@Client.on_edited_message(filters.command("link"))
+@Client.on_message(filters.command("link"))
 async def link(client, message):
-    await message.reply_text("♨️♨️ Are You Movie Lover ? ♨️\n\n🎬 Then You Are Welcomed To My Group For A Daily Breeze Of Movies\n༺━━━━━━━ ✧ ━━━━━━━༻\n\n📌 Old & New Movies/Series\n\n📌 Proper HD, DVD-Rip & Tv-Rip\n\n📌 Available In Various Size\n\n📌 Bengali | Hindi | English & More\n\n༺━━━━━━━ ✧ ━━━━━━━༻\n\n✔️ Group - https://telegram.me/joinchat/iVePgxkxvQ0yOTBl\n\n👆Click Link For Join Group")
+    await message.reply_text("♨️♨️ Are You Movie Lover ? ♨️\n\n🎬 Then You Are Welcomed To My Group For A Daily Breeze Of Movies\n༺━━━━━━━ ✧ ━━━━━━━༻\n\n📌 Old & New Movies/Series\n\n📌 Proper HD, DVD-Rip & Tv-Rip\n\n📌 Available In Various Size\n\n📌 Bengali | Hindi | English & More\n\n༺━━━━━━━ ✧ ━━━━━━━༻\n\n✔️ Group - https://telegram.me/joinchat/e1rP0cmRJdAyMDk1\n\n👆Click Link For Join Group")
 
 @Client.on_edited_message(filters.group & filters.text & filters.chat(-1001759577303) & filters.incoming)
 async def give_filter(client, message):
@@ -490,7 +490,7 @@ Phonepe 📲 Soon...
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('🔗 Movie Club', url=f'https://t.me/+iVePgxkxvQ0yOTBl')
+            InlineKeyboardButton('🔗 Movie Club', url=f'https://t.me/+e1rP0cmRJdAyMDk1')
             ],[
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
             InlineKeyboardButton(text="About 😎", callback_data="crpf")
@@ -836,7 +836,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>↪️ Requested:</b> {search}\n<b>👥 Requested by:</b> {message.from_user.mention}\n<b>📤 Uploaded To:</b> Movie Club Server\n<b>🧑‍🔧 Get Support</b> ✔️ <a href='https://t.me/hellodragan'>TG Dragon</a>\n<b>© Powered By:</b> <a href='https://t.me/+iVePgxkxvQ0yOTBl'>{message.chat.title}</a>\n\n📌 Press The Down Buttons To Access The File.\n<s>📌 This Post Will Be Deleted After 10 Minutes.</s>"
+        cap = f"<b>↪️ Requested:</b> {search}\n<b>👥 Requested by:</b> {message.from_user.mention}\n<b>📤 Uploaded To:</b> Movie Club Server\n<b>🧑‍🔧 Get Support</b> ✔️ <a href='https://t.me/hellodarklord'>DarkLord</a>\n<b>© Powered By:</b> <a href='https://t.me/+e1rP0cmRJdAyMDk1'>{message.chat.title}</a>\n\n📌 Press The Down Buttons To Access The File.\n<s>📌 This Post Will Be Deleted After 10 Minutes.</s>"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024], reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
