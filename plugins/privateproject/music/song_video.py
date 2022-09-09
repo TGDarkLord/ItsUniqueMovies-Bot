@@ -37,7 +37,7 @@ def time_to_seconds(time):
     stringt = str(time)
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(':'))))
 
-@Client.on_edited_message(filters.command(["song", "music", "mp3"]) & ~filters.channel)
+@Client.on_message(filters.command(["song"]) & ~filters.channel & ~filters.edited)
 def a(client, message: Message):
     urlissed = get_text(message)
     query = ''
