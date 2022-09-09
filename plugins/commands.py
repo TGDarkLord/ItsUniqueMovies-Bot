@@ -46,7 +46,7 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, LuciferMoringstar.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('🔗 Movie Club', url=f'https://t.me/+iVePgxkxvQ0yOTBl')
+            InlineKeyboardButton('🔗 Movie Club', url=f'https://t.me/+e1rP0cmRJdAyMDk1')
             ],[
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
             InlineKeyboardButton(text="About 😎", callback_data="crpf")
@@ -92,7 +92,7 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('🔗 Movie Club', url=f'https://t.me/+iVePgxkxvQ0yOTBl')
+            InlineKeyboardButton('🔗 Movie Club', url=f'https://t.me/+e1rP0cmRJdAyMDk1')
             ],[
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
             InlineKeyboardButton(text="About 😎", callback_data="crpf")
@@ -263,7 +263,7 @@ async def start(client, message):
         )
                     
 
-@Client.on_edited_message(filters.command('channel') & filters.user(ADMINS))
+@Client.on_message(filters.command('channel') & filters.user(ADMINS))
 async def channel_info(bot, message):
            
     """Send basic information of channel"""
@@ -294,7 +294,7 @@ async def channel_info(bot, message):
         os.remove(file)
 
 
-@Client.on_edited_message(filters.command('logs') & filters.user(ADMINS))
+@Client.on_message(filters.command('logs') & filters.user(ADMINS))
 async def log_file(bot, message):
     """Send log file"""
     try:
@@ -302,7 +302,7 @@ async def log_file(bot, message):
     except Exception as e:
         await message.reply(str(e))
 
-@Client.on_edited_message(filters.command('delete') & filters.user(ADMINS))
+@Client.on_message(filters.command('delete') & filters.user(ADMINS))
 async def delete(bot, message):
     """Delete file from database"""
     reply = message.reply_to_message
@@ -350,7 +350,7 @@ async def delete(bot, message):
                 await msg.edit('File not found in database')
 
 
-@Client.on_edited_message(filters.command('deleteall') & filters.user(ADMINS))
+@Client.on_message(filters.command('deleteall') & filters.user(ADMINS))
 async def delete_all_index(bot, message):
     await message.reply_text(
         'This will delete all indexed files.\nDo you want to continue??',
@@ -379,7 +379,7 @@ async def delete_all_index_confirm(bot, message):
     await message.message.edit('Succesfully Deleted All The Indexed Files.')
 
 
-@Client.on_edited_message(filters.command('settings'))
+@Client.on_message(filters.command('settings'))
 async def settings(client, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
@@ -493,7 +493,7 @@ async def settings(client, message):
 
 
 
-@Client.on_edited_message(filters.command('set_template'))
+@Client.on_message(filters.command('set_template'))
 async def save_template(client, message):
     sts = await message.reply("Checking template")
     userid = message.from_user.id if message.from_user else None
