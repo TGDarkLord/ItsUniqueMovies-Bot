@@ -23,12 +23,12 @@ from database.gtrans_mdb import find_one
 async def left(client,message):
 	if (message.reply_to_message):
 		try:
-			lgcd = message.text.split("/translate")
+			lgcd = message.text.split("/tr")
 			lg_cd = lgcd[1].lower().replace(" ", "")
 			tr_text = message.reply_to_message.text
 			translator = Translator()
 			translation = translator.translate(tr_text,dest = lg_cd)
-	                hehek = InlineKeyboardMarkup(
+			hehek = InlineKeyboardMarkup(
                                 [
                                     [
                                         InlineKeyboardButton(
@@ -46,8 +46,6 @@ async def left(client,message):
 				await message.reply_text(f"```{translation.text}```", reply_markup=hehek, reply_to_message_id=message.reply_to_message.message_id)
 			except:
 			   	await message.reply_text(f"```{translation.text}```", reply_markup=hehek, reply_to_message_id=message.reply_to_message.message_id)
-			
-
 
 		except :
 			print("error")
