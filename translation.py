@@ -1,7 +1,7 @@
 class Script(object):
     START_TXT = """<i><b>Hello 👋 {} {},</i></b>
 
-<i><b>I Am Not Only <a href="https://t.me/Moviesclub_Robot">Movie Club Bot</a> To Assist You But Also Employed At <a href="https://t.me/+iVePgxkxvQ0yOTBl">Movie Club</a> Group By <a href="https://t.me/hellodragan">Dragon</a> So You Can't Get My Service By Adding Me To Your Group So Don't Waste Your Time & Data</i></b> 😉
+<i><b>I Am Not Only <a href="https://t.me/MovieClub03_Bot">Movie Club Bot</a> To Assist You But Also Employed At <a href="https://t.me/+e1rP0cmRJdAyMDk1">Movie Club</a> Group By <a href="https://t.me/hellodarklord">DarkLord</a> So You Can't Get My Service By Adding Me To Your Group So Don't Waste Your Time & Data</i></b> 😉
 
 <i><b>Better You Click Below & Join <a href="https://t.me/+iVePgxkxvQ0yOTBl">Movie Club</a> & Feel The Experience Of Downloading Unlimited Movies/Series</i></b> ✅
 
@@ -9,7 +9,7 @@ class Script(object):
     
     HELP_TXT = """<i><b>Hello 👋 {},</i></b>
 
-<i><b>I can Guide You Through All Of <a href="https://t.me/MoviesClub_Robot">Movie Club Bot</a>'s Cool Features & How To Properly Use Them. Use The Buttons Below To Navigate Through All Of The Modules.</i></b>"""
+<i><b>I can Guide You Through All Of <a href="https://t.me/MovieClub_Bot">Movie Club Bot</a>'s Cool Features & How To Properly Use Them. Use The Buttons Below To Navigate Through All Of The Modules.</i></b>"""
 
     ALIVE_TXT = """<b>Module :-</b> Alive
 
@@ -19,7 +19,7 @@ class Script(object):
 
 • /alive - Look
 
-<b>Maintained By ✅ <a href="https://t.me/hellodragan">Dragon</a></b>"""
+<b>Maintained By ✔️ <a href="https://t.me/hellodarklord">DarkLord</a></b>"""
 
     LINK_TXT = """<b>Module :-</b> Invite Link
 
@@ -29,7 +29,7 @@ class Script(object):
 
 • /link - To Get Movie Club Group Link
 
-<b>Maintained By ✅ <a href="https://t.me/hellodragan">Dragon</a></b>"""
+<b>Maintained By ✔️ <a href="https://t.me/hellodarklord">DarkLord</a></b>"""
 
     INFO_TXT = """<b>Module :-</b> IDs
 
@@ -40,7 +40,7 @@ class Script(object):
 • /info  - get information about a user.
 • /json - get the json details of a message.
 
-<b>Maintained By ✅ <a href="https://t.me/hellodragan">Dragon</a></b>""" 
+<b>Maintained By ✔️ <a href="https://t.me/hellodarklord">DarkLord</a></b>""" 
 
     SEARCH_TXT = """<b>Module :-</b> Imdb Info
 
@@ -50,7 +50,7 @@ class Script(object):
 • /imdb  - get the film information from IMDb source.
 • /search  - get the film information from various sources.
 
-<b>Maintained By ✅ <a href="https://t.me/hellodragan">Dragon</a></b>""" 
+<b>Maintained By ✔️ <a href="https://t.me/hellodarklord">Dragon</a></b>""" 
   
     STATUS_TXT = """<b>Total Files:</b> <code>{}</code>
 <b>Total Users:</b> <code>{}</code>
@@ -74,7 +74,7 @@ class Script(object):
 • /song or /mp3 (songname) - download song from yt servers.
 • /video or /mp4 (songname) - download video from yt servers.
 
-<b>Maintained By ✅ <a href="https://t.me/hellodragan">Dragon</a></b>""" 
+<b>Maintained By ✔️ <a href="https://t.me/hellodarklord">DarkLord</a></b>""" 
   
     LOG_TEXT_G = """#NewGroup
 Group = {}(<code>{}</code>)
@@ -102,4 +102,3 @@ Name - {}"""
       
     STATUS = """{}\nChat Member Status**\n\n```recently``` - {}\n```within_week``` - {}\n```within_month``` - {}\n```long_time_ago``` - {}\nDeleted Account - {}\nBot - {}\nUnCached - {}
 """
-
