@@ -312,12 +312,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
         return await query.answer("""
 ミ★ MOVIE CLUB ★彡
 
-☞ Storage Of New & Old Movies/Series
-☞ Available In Many Sizes & Languages
-☞ Receivable In Various Quality
+☞ Sᴛᴏʀᴀɢᴇ Oғ Nᴇᴡ & Oʟᴅ Mᴏᴠɪᴇs/Sᴇʀɪᴇs
+☞ Aᴠᴀɪʟᴀʙʟᴇ Iɴ Mᴀɴʏ Sɪᴢᴇs & Lᴀɴɢᴜᴀɢᴇs
+☞ Rᴇᴄᴇɪᴠᴀʙʟᴇ Iɴ Vᴀʀɪᴏᴜs Qᴜᴀʟɪᴛʏ
 
 👑
-『TG』 ཌĐʀᴀɢᴏƝད°ᴵᴰᴹ°ツ
+ＤａｒｋＬｏｒｄ
 """, show_alert=True)
     elif "deletecb" in query.data:
         await query.answer()
@@ -408,8 +408,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if f_caption is None:
             f_caption = f"{files.file_name}"
         buttons = [[
-                   InlineKeyboardButton('🆘👤 Owner', url='https://t.me/hellodragan'),
-                   InlineKeyboardButton('🆘🤖 Contact', url='https://t.me/hellodragan')
+                   InlineKeyboardButton('🆘👤 Owner', url='https://t.me/hellodarklord'),
+                   InlineKeyboardButton('🆘🤖 Contact', url='https://t.me/hellodarklord')
                    ],[
                    InlineKeyboardButton(text="⁉️ Want To Save/Share This File", callback_data="scst")
                    ],[
@@ -459,8 +459,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if f_caption is None:
             f_caption = f"{title}"
         buttons = [[
-                   InlineKeyboardButton('🆘👤 Owner', url='https://t.me/hellodragan'),
-                   InlineKeyboardButton('🆘🤖 Contact', url='https://t.me/hellodragan')
+                   InlineKeyboardButton('🆘👤 Owner', url='https://t.me/hellodarklord'),
+                   InlineKeyboardButton('🆘🤖 Contact', url='https://t.me/hellodarklord')
                    ],[
                    InlineKeyboardButton(text="⁉️ Want To Save/Share This File", callback_data="scst")
                    ],[
@@ -519,7 +519,7 @@ Phonepe 📲 Soon...
         return await query.answer("""
 ꧁֍MOVIE CLUB BOT֍꧂
 
-🤴 Creator: TG Dragon
+🤴 Creator: DarkLord
 ❖ Language: Python3
 ❖ Hosted: Heroku 
 ❖ Version: 2.0.1 [BETA]
