@@ -49,7 +49,7 @@ async def save_group(bot, message):
         if settings["welcome"]:
             for u in message.new_chat_members:
                 buttons = [[
-                InlineKeyboardButton('🔔 Join Updates Channel', url="https://t.me/+I2qmmf0AIwFiMjNl")
+                InlineKeyboardButton('🔔 Join Updates Channel', url="https://t.me/+5lA5O0Y7JLEzNTdl")
             ]]
                 if (temp.MELCOW).get('welcome') is not None:
                     try:
@@ -57,7 +57,7 @@ async def save_group(bot, message):
                     except:
                         pass
                 temp.MELCOW['welcome'] = await message.reply_text(
-                text=f'<b>Hello 👋 {u.mention},</b>\n\nWelcome To <b>{message.chat.title} 💐</b>\n\nMy Name Is <b><a href="https://t.me/Moviesclub_Robot">MOVIE CLUB BOT</a></b>,<b> I Can Provide Movies/Series In This Group.Just Type The Actual Name Of The Movie/Series.You Will Get The Movie/Series If You Write Correct Spelling.If You Do not Get The Movie/Series It Is Sure That You Have Written Incorrect Spelling Or Your Requested Movie/Series Does Not Exit In My Database 😐.</b>',
+                text=f'<b>Hello 👋 {u.mention},</b>\n\nWelcome To <b>{message.chat.title} 💐</b>\n\nMy Name Is <b><a href="https://t.me/MovieClub03_Bot">MOVIE CLUB BOT</a></b>,<b> I Can Provide Movies/Series In This Group.Just Type The Actual Name Of The Movie/Series.You Will Get The Movie/Series If You Write Correct Spelling.If You Do not Get The Movie/Series It Is Sure That You Have Written Incorrect Spelling Or Your Requested Movie/Series Does Not Exit In My Database 😐.</b>',
                 disable_web_page_preview = True,
                 reply_markup=InlineKeyboardMarkup(buttons))
     
