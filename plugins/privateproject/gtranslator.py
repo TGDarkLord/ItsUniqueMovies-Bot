@@ -28,12 +28,11 @@ async def left(client,message):
 			tr_text = message.reply_to_message.text
 			translator = Translator()
 			translation = translator.translate(tr_text,dest = lg_cd)
-                try:
-				for i in list:
-					if list[i]==translation.src:
-						fromt = i
-					if list[i] == translation.dest:
-						to = i 
+	                for i in list:
+		              if list[i]==translation.src:
+				 fromt = i
+		              if list[i] == translation.dest:
+			         to = i 
 				await message.reply_text(f"```{translation.text}```", reply_markup=hehek, reply_to_message_id=message.reply_to_message.message_id)
 			except:
 			   	await message.reply_text(f"```{translation.text}```", reply_markup=hehek, reply_to_message_id=message.reply_to_message.message_id)
@@ -43,4 +42,3 @@ async def left(client,message):
 			print("error")
 	else:
 			 ms = await message.reply_text("You can Use This Command by using reply to message")
-			 await ms.delete()
