@@ -19,25 +19,16 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQ
 from .list import list
 from database.gtrans_mdb import find_one
 
-@Client.on_message(filters.command(["tr"]))
+@Client.on_message(filters.command(["translate"]))
 async def left(client,message):
 	if (message.reply_to_message):
 		try:
-			lgcd = message.text.split("/tr")
+			lgcd = message.text.split("/translate")
 			lg_cd = lgcd[1].lower().replace(" ", "")
 			tr_text = message.reply_to_message.text
 			translator = Translator()
 			translation = translator.translate(tr_text,dest = lg_cd)
-			hehek = InlineKeyboardMarkup(
-                                [
-                                    [
-                                        InlineKeyboardButton(
-                                            text=f"translated from {translation.src} to {translation.dest}", url="https://cloud.google.com/translate/docs/languages"
-                                        )
-                                    ],
-                                ]
-                            )
-			try:
+                try:
 				for i in list:
 					if list[i]==translation.src:
 						fromt = i
