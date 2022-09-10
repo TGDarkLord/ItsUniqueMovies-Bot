@@ -9,7 +9,7 @@ class Script(object):
     
     HELP_TXT = """<i><b>Hello 👋 {},</i></b>
 
-<i><b>I can Guide You Through All Of <a href="https://t.me/MovieClub_Bot">Movie Club Bot</a>'s Cool Features & How To Properly Use Them. Use The Buttons Below To Navigate Through All Of The Modules.</i></b>"""
+<i><b>I can Guide You Through All Of <a href="https://t.me/MovieClub03_Bot">Movie Club Bot</a>'s Cool Features & How To Properly Use Them. Use The Buttons Below To Navigate Through All Of The Modules.</i></b>"""
 
     ALIVE_TXT = """<b>Module :-</b> Alive
 
