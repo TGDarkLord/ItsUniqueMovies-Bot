@@ -68,7 +68,7 @@ async def start(client, message):
         reply_markup = InlineKeyboardMarkup(button)
         await message.reply_photo(
             photo=choice(AUTH),
-            caption=f"""<i><b>👋 Hello {message.from_user.mention},\n\nYou Have <a href="{invite_link.invite_link}">Not Subscribed</a> To <a href="{invite_link.invite_link}">My Updates Channel</a>. To View The File, Click On 📣 MOVIE CLUB UPDATES 📣 Button & Join.</i></b>""",
+            caption=f"""<i><b>👋 Hello {message.from_user.mention},\n\nYou Have <a href="{invite_link.invite_link}">Not Subscribed</a> To <a href="{invite_link.invite_link}">My Updates Channel</a>. To View The File, Click On 📣 ITS UNIQUE MOVIES UPDATES 📣 Button & Join.</i></b>""",
             reply_markup=reply_markup
             )
         return
