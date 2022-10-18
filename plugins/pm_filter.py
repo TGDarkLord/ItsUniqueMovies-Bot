@@ -117,7 +117,7 @@ async def next_page(bot, query):
         )    
         btn.append(
             [InlineKeyboardButton(f"🗓 {round(int(offset) / 10) + 1} / {round(total / 10)}", callback_data="pages"),
-             InlineKeyboardButton("🗑️", callback_data="close_data"),
+             InlineKeyboardButton("🗑️", callback_data="close"),
              InlineKeyboardButton("⚠️ Faq", callback_data="faq")]
         )
         btn.append(
@@ -177,7 +177,7 @@ async def advantage_spoll_choker(bot, query):
 
 @Client.on_callback_query()
 async def cb_handler(client: Client, query: CallbackQuery):
-    if query.data == "close_data":
+    if query.data == "close":
         await query.message.delete()
         try:
             await query.message.reply_to_message.delete()
@@ -196,20 +196,20 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     title = chat.title
                 except:
                     await query.message.edit_text("Make sure I'm present in your group!!", quote=True)
-                    return await query.answer('Connecting Film Lovers')
+                    return await query.answer('Piracy Is Crime')
             else:
                 await query.message.edit_text(
                     "I'm not connected to any groups!\nCheck /connections or connect to any groups",
                     quote=True
                 )
-                return await query.answer('Connecting Film Lovers')
+                return await query.answer('Piracy Is Crime')
 
         elif chat_type in ["group", "supergroup"]:
             grp_id = query.message.chat.id
             title = query.message.chat.title
 
         else:
-            return await query.answer('Connecting Film Lovers')
+            return await query.answer('Piracy Is Crime')
 
         st = await client.get_chat_member(grp_id, userid)
         if (st.status == "creator") or (str(userid) in ADMINS):
@@ -263,7 +263,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=keyboard,
             parse_mode="md"
         )
-        return await query.answer('Connecting Film Lovers')
+        return await query.answer('Piracy Is Crime')
     elif "connectcb" in query.data:
         await query.answer()
 
@@ -284,7 +284,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             )
         else:
             await query.message.edit_text('Some error occurred!!', parse_mode="md")
-        return await query.answer('Connecting Film Lovers')
+        return await query.answer('Piracy Is Crime')
     elif "disconnect" in query.data:
         await query.answer()
 
@@ -307,7 +307,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode="md"
             )
-        return await query.answer('Connecting Film Lovers')
+        return await query.answer('Piracy Is Crime')
     elif "rsrq" in query.data:
         return await query.answer("""
 ミ★ ITS UNIQUE MOVIES ★彡
@@ -336,7 +336,7 @@ ITS UNIQUE MOVIES
                 f"Some error occurred!!",
                 parse_mode="md"
             )
-        return await query.answer('Connecting Film Lovers')
+        return await query.answer('Piracy Is Crime')
     elif query.data == "backcb":
         await query.answer()
 
@@ -347,7 +347,7 @@ ITS UNIQUE MOVIES
             await query.message.edit_text(
                 "There are no active connections!! Connect to some groups first.",
             )
-            return await query.answer('Connecting Film Lovers')
+            return await query.answer('Piracy Is Crime')
         buttons = []
         for groupid in groupids:
             try:
@@ -413,7 +413,7 @@ ITS UNIQUE MOVIES
                ],[
                InlineKeyboardButton(text="⁉️ Want To Save/Share This File", callback_data="scst")
                ],[
-               InlineKeyboardButton('🗑 Close File', callback_data='close_data')]]
+               InlineKeyboardButton('🗑 Close File', callback_data='close')]]
         try:
             if AUTH_CHANNEL and not await is_subscribed(client, query):
                 await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
@@ -464,7 +464,7 @@ ITS UNIQUE MOVIES
                ],[
                InlineKeyboardButton(text="⁉️ Want To Save/Share This File", callback_data="scst")
                ],[
-               InlineKeyboardButton('🗑 Close File', callback_data='close_data')]]
+               InlineKeyboardButton('🗑 Close File', callback_data='close')]]
     elif "scst" in query.data:
         return await query.answer("""
 » HERE IS THE SOLUTION «
@@ -528,7 +528,7 @@ Phonepe 📲 Soon...
 ֎ Bot: Indian 🇮🇳
 """, show_alert=True)
     
-        await query.answer('Connecting Film Lovers')
+        await query.answer('Piracy Is Crime')
     elif query.data == "help":
         buttons = [[
             
@@ -542,7 +542,7 @@ Phonepe 📲 Soon...
             ],[
             InlineKeyboardButton('😎 About', callback_data='crpf'),
             InlineKeyboardButton('🏠 Home', callback_data='start'),
-            InlineKeyboardButton('❎ Close', callback_data='close_data'),
+            InlineKeyboardButton('❎ Close', callback_data='close'),
          ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.reply_chat_action("Typing")
@@ -718,7 +718,7 @@ Phonepe 📲 Soon...
             ]
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_reply_markup(reply_markup)
-    await query.answer('Connecting Film Lovers')
+    await query.answer('Piracy Is Crime')
 
 
 async def auto_filter(client, msg, spoll=False):
@@ -776,7 +776,7 @@ async def auto_filter(client, msg, spoll=False):
         )    
         btn.append(
             [InlineKeyboardButton(text=f"🗓 1/{round(int(total_results) / 10)}", callback_data="pages"),
-             InlineKeyboardButton("🗑️", callback_data="close_data"),
+             InlineKeyboardButton("🗑️", callback_data="close"),
              InlineKeyboardButton("⚠️ Faq", callback_data="faq")]
         )
         btn.append(
@@ -788,7 +788,7 @@ async def auto_filter(client, msg, spoll=False):
     else:
         btn.append(
             [InlineKeyboardButton(text="🗓 1/1", callback_data="pages"),
-             InlineKeyboardButton("🗑️", callback_data="close_data"),
+             InlineKeyboardButton("🗑️", callback_data="close"),
              InlineKeyboardButton("⚠️ Faq", callback_data="faq")]
         )
         btn.append(
@@ -850,77 +850,13 @@ async def auto_filter(client, msg, spoll=False):
             await hmm.delete()
         except Exception as e:
             logger.exception(e)
-            fek = await message.reply_photo(photo="https://telegra.ph/file/104348ac37ea4d974b811.jpg", caption=cap, reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
+            fek = await message.reply_photo(photo="https://telegra.ph/file/b21d8ae65b687e2f5fb50.jpg", caption=cap, reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(1200)
             await fek.delete()
     else:
-        fuk = await message.reply_photo(photo="https://telegra.ph/file/104348ac37ea4d974b811.jpg", caption=cap, reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
+        fuk = await message.reply_photo(photo="https://telegra.ph/file/b21d8ae65b687e2f5fb50.jpg", caption=cap, reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
         await asyncio.sleep(1200)
         await fuk.delete()
-
-async def advantage_spell_chok(msg):
-    query = re.sub(
-        r"\b(pl(i|e)*?(s|z+|ease|se|ese|(e+)s(e)?)|((send|snd|giv(e)?|gib)(\sme)?)|movie(s)?|new|latest|br((o|u)h?)*|^h(e|a)?(l)*(o)*|mal(ayalam)?|t(h)?amil|file|that|find|und(o)*|kit(t(i|y)?)?o(w)?|thar(u)?(o)*w?|kittum(o)*|aya(k)*(um(o)*)?|full\smovie|any(one)|with\ssubtitle(s)?)",
-        "", msg.text, flags=re.IGNORECASE)  # plis contribute some common words
-    search = msg.text
-    query = query.strip() + " movie"
-    g_s = await search_gagala(query)
-    g_s += await search_gagala(msg.text)
-    gs_parsed = []
-    if not g_s:
-        k = await msg.reply("I couldn't find any movie in that name.")
-        await asyncio.sleep(8)
-        await k.delete()
-        return
-    regex = re.compile(r".*(imdb|wikipedia).*", re.IGNORECASE)  # look for imdb / wiki results
-    gs = list(filter(regex.match, g_s))
-    gs_parsed = [re.sub(
-        r'\b(\-([a-zA-Z-\s])\-\simdb|(\-\s)?imdb|(\-\s)?wikipedia|\(|\)|\-|reviews|full|all|episode(s)?|film|movie|series)',
-        '', i, flags=re.IGNORECASE) for i in gs]
-    if not gs_parsed:
-        reg = re.compile(r"watch(\s[a-zA-Z0-9_\s\-\(\)]*)*\|.*",
-                         re.IGNORECASE)  # match something like Watch Niram | Amazon Prime
-        for mv in g_s:
-            match = reg.match(mv)
-            if match:
-                gs_parsed.append(match.group(1))
-    user = msg.from_user.id if msg.from_user else 0
-    movielist = []
-    gs_parsed = list(dict.fromkeys(gs_parsed))  # removing duplicates https://stackoverflow.com/a/7961425
-    if len(gs_parsed) > 3:
-        gs_parsed = gs_parsed[:3]
-    if gs_parsed:
-        for mov in gs_parsed:
-            imdb_s = await get_poster(mov.strip(), bulk=True)  # searching each keyword in imdb
-            if imdb_s:
-                movielist += [movie.get('title') for movie in imdb_s]
-    movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
-    movielist = list(dict.fromkeys(movielist))  # removing duplicates
-    if not movielist:
-        button = InlineKeyboardMarkup(
-        [[
-           InlineKeyboardButton("✅ Google ✅", url=f"https://www.google.com/search?q={search}")
-        ],
-        [
-           InlineKeyboardButton("⭕️ IMDb", url=f"https://www.imdb.com/find?q={search}"),
-           InlineKeyboardButton("Wikipedia ⭕️", url=f"https://en.m.wikipedia.org/w/index.php?search={search}")
-        ]])
-        k = await msg.reply(f"Hey, Your word <b>{search}</b> is No Movie/Series Related to the Given Word Was Found 🥺\n\n<s>Please Go to Google and Confirm the Correct Spelling 🥺🙏</s>", reply_markup=button)
-        await asyncio.sleep(60)
-        await k.delete()
-        return 
-    SPELL_CHECK[msg.message_id] = movielist
-    btn = [[
-        InlineKeyboardButton(
-            text=movie.strip(),
-            callback_data=f"spolling#{user}#{k}",
-        )
-    ] for k, movie in enumerate(movielist)]
-    btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    m = await msg.reply("I couldn't find anything related to that\nDid you mean any one of these?",
-                    reply_markup=InlineKeyboardMarkup(btn))
-    await asyncio.sleep(20)
-    await m.delete()
 
 
 async def manual_filters(client, message, text=False):
