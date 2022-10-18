@@ -1,5 +1,5 @@
 {
-    "name": "MovieClub-Robot",
+    "name": "ItsUniqueMovies-Bot",
     "description": "This is my private project",
     "stack": "container",
     "keywords": [
@@ -15,8 +15,8 @@
       "index",
       "inline"
     ],
-    "website": "https://github.com/TGDarkLord/MovieClub-Robot",
-    "repository": "https://github.com/TGDarkLord/MovieClub-Robot",
+    "website": "https://github.com/TGDarkLord/ItsUniqueMovies-Bot",
+    "repository": "https://github.com/TGDarkLord/ItsUniqueMovies-Bot",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
