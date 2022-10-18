@@ -40,7 +40,7 @@ async def alive(client, message):
 async def link(client, message):
     await message.reply_text("♨️♨️ Are You Movie Lover ? ♨️\n\n🎬 Then You Are Welcomed To My Group For A Daily Breeze Of Movies\n༺━━━━━━━ ✧ ━━━━━━━༻\n\n📌 Old & New Movies/Series\n\n📌 Proper HD, DVD-Rip & Tv-Rip\n\n📌 Available In Various Size\n\n📌 Bengali | Hindi | English & More\n\n༺━━━━━━━ ✧ ━━━━━━━༻\n\n✔️ Group - https://telegram.me/joinchat/Its_unique_movies_adda\n\n👆Click Link For Join Group")
 
-@Client.on_message(filters.group & filters.text & filters.chat(-) & filters.incoming & ~filters.edited)
+@Client.on_message(filters.group & filters.text & filters.chat(-1001510283128) & filters.incoming & ~filters.edited)
 async def give_filter(client, message):
     k = await manual_filters(client, message)
     if k == False:
