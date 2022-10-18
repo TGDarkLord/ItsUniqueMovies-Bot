@@ -38,9 +38,9 @@ async def alive(client, message):
 
 @Client.on_message(filters.command("link"))
 async def link(client, message):
-    await message.reply_text("♨️♨️ Are You Movie Lover ? ♨️\n\n🎬 Then You Are Welcomed To My Group For A Daily Breeze Of Movies\n༺━━━━━━━ ✧ ━━━━━━━༻\n\n📌 Old & New Movies/Series\n\n📌 Proper HD, DVD-Rip & Tv-Rip\n\n📌 Available In Various Size\n\n📌 Bengali | Hindi | English & More\n\n༺━━━━━━━ ✧ ━━━━━━━༻\n\n✔️ Group - https://telegram.me/joinchat/e1rP0cmRJdAyMDk1\n\n👆Click Link For Join Group")
+    await message.reply_text("♨️♨️ Are You Movie Lover ? ♨️\n\n🎬 Then You Are Welcomed To My Group For A Daily Breeze Of Movies\n༺━━━━━━━ ✧ ━━━━━━━༻\n\n📌 Old & New Movies/Series\n\n📌 Proper HD, DVD-Rip & Tv-Rip\n\n📌 Available In Various Size\n\n📌 Bengali | Hindi | English & More\n\n༺━━━━━━━ ✧ ━━━━━━━༻\n\n✔️ Group - https://telegram.me/joinchat/Its_unique_movies_adda\n\n👆Click Link For Join Group")
 
-@Client.on_message(filters.group & filters.text & filters.chat(-1001796720313) & filters.incoming & ~filters.edited)
+@Client.on_message(filters.group & filters.text & filters.chat(-) & filters.incoming & ~filters.edited)
 async def give_filter(client, message):
     k = await manual_filters(client, message)
     if k == False:
@@ -134,7 +134,7 @@ async def next_page(bot, query):
                 InlineKeyboardButton("Next Page ➡", callback_data=f"next_{req}_{key}_{n_offset}")]
             )
     btn.insert(0, [
-        InlineKeyboardButton(text="ミ★ MOVIE CLUB ★彡", callback_data="rsrq"),
+        InlineKeyboardButton(text="ミ★ ITS UNIQUE MOVIES ★彡", callback_data="rsrq"),
     ])
     btn.insert(0, [
         InlineKeyboardButton(text="📂 Get All Files 📂", callback_data=f'get'),
@@ -310,14 +310,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
         return await query.answer('Connecting Film Lovers')
     elif "rsrq" in query.data:
         return await query.answer("""
-ミ★ MOVIE CLUB ★彡
+ミ★ ITS UNIQUE MOVIES ★彡
 
 ☞ Sᴛᴏʀᴀɢᴇ Oғ Nᴇᴡ & Oʟᴅ Mᴏᴠɪᴇs/Sᴇʀɪᴇs
 ☞ Aᴠᴀɪʟᴀʙʟᴇ Iɴ Mᴀɴʏ Sɪᴢᴇs & Lᴀɴɢᴜᴀɢᴇs
 ☞ Rᴇᴄᴇɪᴠᴀʙʟᴇ Iɴ Vᴀʀɪᴏᴜs Qᴜᴀʟɪᴛʏ
 
 👑
-ＤａｒｋＬｏｒｄ
+ITS UNIQUE MOVIES 
 """, show_alert=True)
     elif "deletecb" in query.data:
         await query.answer()
@@ -408,12 +408,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if f_caption is None:
             f_caption = f"{files.file_name}"
         buttons = [[
-                   InlineKeyboardButton('🆘👤 Owner', url='https://t.me/hellodarklord'),
-                   InlineKeyboardButton('🆘🤖 Contact', url='https://t.me/hellodarklord')
-                   ],[
-                   InlineKeyboardButton(text="⁉️ Want To Save/Share This File", callback_data="scst")
-                   ],[
-                   InlineKeyboardButton('🗑 Close File', callback_data='close_data')]]
+               InlineKeyboardButton('🎥 TK HD Hub', url='https://t.me/+4yoDh0x8j80wOTVl'),
+               InlineKeyboardButton('🎥 TK HP Hub', url='https://t.me/+oRO-NDOF4LU4ZjRl')
+               ],[
+               InlineKeyboardButton(text="⁉️ Want To Save/Share This File", callback_data="scst")
+               ],[
+               InlineKeyboardButton('🗑 Close File', callback_data='close_data')]]
         try:
             if AUTH_CHANNEL and not await is_subscribed(client, query):
                 await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
@@ -459,12 +459,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if f_caption is None:
             f_caption = f"{title}"
         buttons = [[
-                   InlineKeyboardButton('🆘👤 Owner', url='https://t.me/hellodarklord'),
-                   InlineKeyboardButton('🆘🤖 Contact', url='https://t.me/hellodarklord')
-                   ],[
-                   InlineKeyboardButton(text="⁉️ Want To Save/Share This File", callback_data="scst")
-                   ],[
-                   InlineKeyboardButton('🗑 Close File', callback_data='close_data')]]
+               InlineKeyboardButton('🎥 TK HD Hub', url='https://t.me/+4yoDh0x8j80wOTVl'),
+               InlineKeyboardButton('🎥 TK HP Hub', url='https://t.me/+oRO-NDOF4LU4ZjRl')
+               ],[
+               InlineKeyboardButton(text="⁉️ Want To Save/Share This File", callback_data="scst")
+               ],[
+               InlineKeyboardButton('🗑 Close File', callback_data='close_data')]]
     elif "scst" in query.data:
         return await query.answer("""
 » HERE IS THE SOLUTION «
@@ -490,7 +490,7 @@ Phonepe 📲 Soon...
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('🔗 Movie Club', url=f'https://t.me/+e1rP0cmRJdAyMDk1')
+            InlineKeyboardButton('🔗 Its Unique Movies 2.0', url=f'https://t.me/Its_unique_movies_adda')
             ],[
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
             InlineKeyboardButton(text="About 😎", callback_data="crpf")
@@ -517,7 +517,7 @@ Phonepe 📲 Soon...
     elif "crpf" in query.data:
         await query.message.reply_chat_action("Typing")
         return await query.answer("""
-꧁֍MOVIE CLUB BOT֍꧂
+꧁֍ITS UNIQUE MOVIES BOT֍꧂
 
 🤴 Creator: DarkLord
 ❖ Language: Python3
@@ -798,7 +798,7 @@ async def auto_filter(client, msg, spoll=False):
                 [InlineKeyboardButton(text="🤖 Check Bot PM 🤖", url=f"https://t.me/{temp.U_NAME}")]
         )
     btn.insert(0, [
-        InlineKeyboardButton(text="ミ★ MOVIE CLUB ★彡", callback_data="rsrq"),
+        InlineKeyboardButton(text="ミ★ ITS UNIQUE MOVIES ★彡", callback_data="rsrq"),
     ]) 
     reply_id = message.reply_to_message.message_id if message.reply_to_message else message.message_id
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
@@ -836,7 +836,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>↪️ Requested:</b> {search}\n<b>👥 Requested by:</b> {message.from_user.mention}\n<b>📤 Uploaded To:</b> Movie Club Server\n<b>🧑‍🔧 Get Support</b> ✔️ <a href='https://t.me/hellodarklord'>DarkLord</a>\n<b>© Powered By:</b> <a href='https://t.me/+e1rP0cmRJdAyMDk1'>{message.chat.title}</a>\n\n📌 Press The Down Buttons To Access The File.\n<s>📌 This Post Will Be Deleted After 10 Minutes.</s>"
+        cap = f"<b>↪️ Requested:</b> {search}\n<b>👥 Requested by:</b> {message.from_user.mention}\n<b>📤 Uploaded To:</b> Its Unique Movies Server\n<b>🧑‍🔧 Get Support</b> ✔️ <a href='https://t.me/+Gvz2BQWO5go3MThl'>TK Brand Series</a>\n\n📌 Press The Down Buttons To Access The File.\n<s>📌 This Post Will Be Deleted After 10 Minutes.</s>"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024], reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
