@@ -23,30 +23,12 @@ BATCH_FILES = {}
 
 @Client.on_message(filters.command("start") & filters.incoming & ~filters.edited)
 async def start(client, message):
-    if message.chat.type in ['group', 'supergroup']:
-        buttons = [
-            [
-                InlineKeyboardButton('🔔 Updates 🔔', url='https://t.me/Tech_Masters')
-            ],
-            [
-                InlineKeyboardButton('🛠️ Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
-                InlineKeyboardButton('Close ✗', callback_data="close_data"),
-            ]
-            ]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await client.send_sticker(chat_id=message.chat.id, sticker='CAACAgUAAxkBAAEFYiZi4AHVMzQipl_wSOzrjcL3OSsAAZgAAiIGAALh0AFXn97xeMer_zEpBA', reply_markup=reply_markup, reply_to_message_id=message.message_id)
-        await asyncio.sleep(10)
-        if not await db.get_chat(message.chat.id):
-            total=await client.get_chat_members_count(message.chat.id)
-            await client.send_message(LOG_CHANNEL, Script.LOG_TEXT_G.format(message.chat.title, message.chat.id, total, "Unknown"))       
-            await db.add_chat(message.chat.id, message.chat.title)
-        return 
     if not await db.is_user_exist(message.from_user.id):
         await db.add_user(message.from_user.id, message.from_user.first_name)
         await client.send_message(LOG_CHANNEL, Script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('🔗 Movie Club', url=f'https://t.me/+e1rP0cmRJdAyMDk1')
+            InlineKeyboardButton('🔗 It's Unique Movies 2.0', url=f'https://t.me/Its_unique_movies_adda')
             ],[
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
             InlineKeyboardButton(text="About 😎", callback_data="crpf")
@@ -81,7 +63,7 @@ async def start(client, message):
         AUTH=["https://telegra.ph/file/b2acb2586995d0e107760.jpg"]
         invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
         button=[[
-         InlineKeyboardButton("🔔 MOVIE CLUB UPDATES 🔔", url=invite_link.invite_link)
+         InlineKeyboardButton("🔔 IT'S UNIQUE MOVIES UPDATES 🔔", url=invite_link.invite_link)
          ]]
         reply_markup = InlineKeyboardMarkup(button)
         await message.reply_photo(
@@ -92,7 +74,7 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('🔗 Movie Club', url=f'https://t.me/+e1rP0cmRJdAyMDk1')
+            InlineKeyboardButton('🔗 It's Unique Movies 2.0', url=f'https://t.me/Its_unique_movies_adda')
             ],[
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
             InlineKeyboardButton(text="About 😎", callback_data="crpf")
@@ -247,8 +229,8 @@ async def start(client, message):
     if f_caption is None:
         f_caption = f"{files.file_name}"
     buttons = [[
-               InlineKeyboardButton('🆘👤 Owner', url='https://t.me/hellodarklord'),
-               InlineKeyboardButton('🆘🤖 Contact', url='https://t.me/hellodarklord')
+               InlineKeyboardButton('🎥 TK HD Hub', url='https://t.me/+4yoDh0x8j80wOTVl'),
+               InlineKeyboardButton('🎥 TK HP Hub', url='https://t.me/+oRO-NDOF4LU4ZjRl')
                ],[
                InlineKeyboardButton(text="⁉️ Want To Save/Share This File", callback_data="scst")
                ],[
