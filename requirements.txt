@@ -19,3 +19,4 @@ python-arq
 ffmpeg-python
 requests
 pytz
+enums
