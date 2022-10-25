@@ -5,7 +5,7 @@ import asyncio
 import datetime
 import pytz
 import enums
-import ChatAction
+import chataction
 from random import choice
 from translation import Script
 from pyrogram import Client, filters
