@@ -512,7 +512,6 @@ Phonepe 📲 Soon...
             parse_mode='html'
         )  
     elif "crpf" in query.data:
-        await query.message.reply_chat_action("Typing")
         return await query.answer("""
 ꧁֍ITS UNIQUE MOVIES BOT֍꧂
 
@@ -542,7 +541,6 @@ Phonepe 📲 Soon...
             InlineKeyboardButton('❎ Close', callback_data='close'),
          ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.reply_chat_action("Typing")
         await query.message.edit_text(
             text="▣ ▢ ▢"
         )
@@ -562,7 +560,6 @@ Phonepe 📲 Soon...
             InlineKeyboardButton('🔙 Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.reply_chat_action("Typing")
         await query.message.edit_text(
             text="▣ ▢ ▢"
         )
@@ -583,7 +580,6 @@ Phonepe 📲 Soon...
             InlineKeyboardButton('🔙 Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.reply_chat_action("Typing")
         await query.message.edit_text(
             text="▣ ▢ ▢"
         )
@@ -604,7 +600,6 @@ Phonepe 📲 Soon...
             InlineKeyboardButton('🔙 Back', callback_data='help'),
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.reply_chat_action("Typing")
         await query.message.edit_text(
             text="▣ ▢ ▢"
         )
@@ -625,7 +620,6 @@ Phonepe 📲 Soon...
             InlineKeyboardButton('🔙 Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.reply_chat_action("Typing")
         await query.message.edit_text(
             text="▣ ▢ ▢"
         )
@@ -646,7 +640,6 @@ Phonepe 📲 Soon...
             InlineKeyboardButton('🔙 Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.reply_chat_action("Typing")
         await query.message.edit_text(
             text="▣ ▢ ▢"
         )
