@@ -509,7 +509,6 @@ Phonepe 📲 Soon...
             text=Script.START_TXT.format(query.from_user.mention, greeting, temp.U_NAME, temp.B_NAME),
             disable_web_page_preview=True,
             reply_markup=reply_markup,
-            parse_mode='html'
         )  
     elif "crpf" in query.data:
         return await query.answer("""
