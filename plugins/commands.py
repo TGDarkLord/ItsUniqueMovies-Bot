@@ -36,7 +36,7 @@ async def start(client, message):
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_sticker("CAACAgUAAxkBAAEFgzxi8nst3-JNMI8lpeiEGoiX8ZuNnQACkgQAAkOCMFZOKrTnrmt1EikE") 
         await asyncio.sleep(1)
-        await m.delete()
+        await message.delete()
         now=datetime.datetime.now()
         tz=pytz.timezone('Asia/Kolkata')
         yn=now.astimezone(tz)
@@ -81,7 +81,7 @@ async def start(client, message):
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_sticker("CAACAgUAAxkBAAEFgzxi8nst3-JNMI8lpeiEGoiX8ZuNnQACkgQAAkOCMFZOKrTnrmt1EikE") 
         await asyncio.sleep(1)
-        await m.delete()     
+        await message.delete()     
         await message.reply_photo(
             photo=random.choice(PICS),
             caption=Script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
