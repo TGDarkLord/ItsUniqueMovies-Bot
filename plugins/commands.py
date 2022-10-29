@@ -34,9 +34,6 @@ async def start(client, message):
             InlineKeyboardButton(text="About 😎", callback_data="crpf")
             ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_sticker("CAACAgUAAxkBAAEFgzxi8nst3-JNMI8lpeiEGoiX8ZuNnQACkgQAAkOCMFZOKrTnrmt1EikE") 
-        await asyncio.sleep(1)
-        await message.delete()
         now=datetime.datetime.now()
         tz=pytz.timezone('Asia/Kolkata')
         yn=now.astimezone(tz)
@@ -54,7 +51,6 @@ async def start(client, message):
             caption=Script.START_TXT.format(message.from_user.mention, greeting, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             quote=True,
-            parse_mode='html'
         )
         return
         
@@ -78,16 +74,12 @@ async def start(client, message):
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
             InlineKeyboardButton(text="About 😎", callback_data="crpf")
             ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_sticker("CAACAgUAAxkBAAEFgzxi8nst3-JNMI8lpeiEGoiX8ZuNnQACkgQAAkOCMFZOKrTnrmt1EikE") 
-        await asyncio.sleep(1)
-        await message.delete()     
+        reply_markup = InlineKeyboardMarkup(buttons)   
         await message.reply_photo(
             photo=random.choice(PICS),
             caption=Script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             quote=True,
-            parse_mode='html'
         )
     return
     data = message.command[1]
