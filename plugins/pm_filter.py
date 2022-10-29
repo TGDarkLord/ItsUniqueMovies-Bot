@@ -551,8 +551,7 @@ Phonepe 📲 Soon...
         )       
         await query.message.edit_text(
             text=Script.HELP_TXT.format(query.from_user.mention),
-            reply_markup=reply_markup,
-            parse_mode='html'
+            reply_markup=reply_markup,  
         )  
     elif query.data == "info":
         buttons = [[
@@ -572,7 +571,6 @@ Phonepe 📲 Soon...
             text=Script.INFO_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
-            parse_mode='html'
         )
     elif query.data == "search":
         buttons = [[
@@ -592,7 +590,6 @@ Phonepe 📲 Soon...
             text=Script.SEARCH_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
-            parse_mode='html'
         )
     elif query.data == "link":
         buttons = [[
@@ -612,7 +609,6 @@ Phonepe 📲 Soon...
             text=Script.LINK_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
-            parse_mode='html'
         )
     elif query.data == "alive":
         buttons = [[
@@ -632,7 +628,6 @@ Phonepe 📲 Soon...
             text=Script.ALIVE_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
-            parse_mode='html'
         )
     elif query.data == "music":
         buttons = [[
@@ -652,7 +647,6 @@ Phonepe 📲 Soon...
             text=Script.MUSIC_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
-            parse_mode='html'
         )
     elif query.data.startswith("setgs"):
         ident, set_type, status, grp_id = query.data.split("#")
