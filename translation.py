@@ -17,9 +17,7 @@ class Script(object):
 
 <b>📚 Available Command:</b>
 
-• /alive - Look
-
-<b>Maintained By ✔️ <a href="https://t.me/hellodarklord">DarkLord</a></b>"""
+• /alive - Look"""
 
     LINK_TXT = """<b>Module :-</b> Invite Link
 
@@ -27,9 +25,7 @@ class Script(object):
 
 <b>📚 Available Command:</b>
 
-• /link - To Get Movie Club Group Link
-
-<b>Maintained By ✔️ <a href="https://t.me/hellodarklord">DarkLord</a></b>"""
+• /link - To Get Movie Club Group Link"""
 
     INFO_TXT = """<b>Module :-</b> IDs
 
@@ -38,9 +34,7 @@ class Script(object):
 <b>📚 Available Commands:</b>
 • /id - get id of a specified user.
 • /info  - get information about a user.
-• /json - get the json details of a message.
-
-<b>Maintained By ✔️ <a href="https://t.me/hellodarklord">DarkLord</a></b>""" 
+• /json - get the json details of a message."""
 
     SEARCH_TXT = """<b>Module :-</b> Imdb Info
 
@@ -48,10 +42,8 @@ class Script(object):
 
 <b>📚 Available Commands:</b>
 • /imdb  - get the film information from IMDb source.
-• /search  - get the film information from various sources.
+• /search  - get the film information from various sources."""
 
-<b>Maintained By ✔️ <a href="https://t.me/hellodarklord">Dragon</a></b>""" 
-  
     STATUS_TXT = """<b>Total Files:</b> <code>{}</code>
 <b>Total Users:</b> <code>{}</code>
 <b>Total Chats:</b> <code>{}</code>
@@ -72,10 +64,8 @@ class Script(object):
 
 <b>📚 Available Commands:</b>
 • /song or /mp3 (songname) - download song from yt servers.
-• /video or /mp4 (songname) - download video from yt servers.
+• /video or /mp4 (songname) - download video from yt servers."""
 
-<b>Maintained By ✔️ <a href="https://t.me/hellodarklord">DarkLord</a></b>""" 
-  
     LOG_TEXT_G = """#NewGroup
 Group = {}(<code>{}</code>)
 Total Members = <code>{}</code>
