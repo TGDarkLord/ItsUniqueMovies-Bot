@@ -783,7 +783,7 @@ async def auto_filter(client, msg, spoll=False):
     btn.insert(0, [
         InlineKeyboardButton(text="ミ★ ITS UNIQUE MOVIES ★彡", callback_data="rsrq"),
     ]) 
-    reply_id = message.reply_to_message.id if message.reply_to_message else message.id
+    reply_id = message.reply_to_message.message_id if message.reply_to_message else message.message_id
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
     if imdb:
@@ -845,7 +845,7 @@ async def auto_filter(client, msg, spoll=False):
 async def manual_filters(client, message, text=False):
     group_id = message.chat.id
     name = text or message.text
-    reply_id = message.reply_to_message.id if message.reply_to_message else message.id
+    reply_id = message.reply_to_message.message_id if message.reply_to_message else message.message_id
     keywords = await get_filters(group_id)
     for keyword in reversed(sorted(keywords, key=len)):
         pattern = r"( |^|[^\w])" + re.escape(keyword) + r"( |$|[^\w])"
